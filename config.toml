@@ -1,0 +1,84 @@
+baseurl = "http://niusmallnan.com/"
+languageCode = "zh-CN"
+title = "Niusmallnan"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "niusmallnan"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+# Define the number of posts per page
+paginate = 10
+footnotereturnlinkcontents = "↩"
+theme = "hugo-icarus-theme"
+
+hasCJKLanguage = true
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
+
+[params]
+    # Tell me who you are
+    author = "牛小腩"
+    bio = "码农 - 创客 - 分享者"
+    location = "中国 沈阳"
+    site_description = "Niusmallnan Blog Site"
+    copyright  = "Niusmallnan"
+    avatar = "css/images/avatar.jpg"
+    logo = "css/images/logo.png"
+
+    # Format dates with Go's time formatting
+    date_format = "2006-01-02"
+
+    # Add custom assets with their paths relative to the static folder
+	custom_css = []
+	custom_js  = []
+
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+[[params.menu]]
+    before = true
+    label  = "首页"
+    link   = "/"
+
+[[params.menu]]
+    before = false
+    label  = "标签"
+    link   = "tags/"
+
+[[params.menu]]
+    before = false
+    label  = "分类"
+    link   = "categories/"
+
+[[params.menu]]
+    before = false
+    label  = "关于我"
+    link   = "aboutme/"
+
+[[params.menu]]
+    before = false
+    label  = "旧版Blog"
+    link   = "http://niusmallnan.github.io/_build/html/"
+
+# Enter a link for the follow button on the left
+[params.profile]
+    follow_button = "https://github.com/niusmallnan"
+
+
+[social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+    github          = "niusmallnan"
+    linkedin        = "niusmallnan"
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    recent_articles = true
+    categories = true
+    tags = true
+    tag_cloud = true
