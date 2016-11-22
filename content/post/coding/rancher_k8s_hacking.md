@@ -16,8 +16,10 @@ menu = ""
 banner = ""
 
 +++
-
+Rancher可以轻松实现Kubernetes的部署，尽管默认的部署已经完全可用，
+但是如果我们想修改部署的K8s版本，这时应当如何应对？
 <!--more-->
+### 原理分析与执行  
 在Rancher中，由于K8s是基于Cattle引擎来部署，所以在K8s在部署完成之后，
 我们可以通过Link Graph来很清晰的看到整体的部署情况。  
 ![](http://ww1.sinaimg.cn/large/006tNc79jw1fa0ybyprq4j30mi07tdh0.jpg)
@@ -57,7 +59,7 @@ k8s引擎的compose文件放在<https://github.com/rancher/rancher-catalog/tree/
 
 这样如果想对rancher-k8s发行版进行深度定制，就可以重新build相关镜像，通过rancher-compose来部署自己的发行版。
 
-### 总结
+### 总结  
 本文写于Rancher1.2行将发布之际，1.2版本是非常重大的更新，Rancher会支持部署原生的K8s版本，
 同时CNI网络和Cloud Provider等都会以插件方式，用户可以自己定义，并且在UI上都会有很好的体现。
 只要了解Rancher部署K8s的原理和过程，我们就可以定制非常适合自身使用的k8s，
