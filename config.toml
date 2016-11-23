@@ -62,7 +62,7 @@ hasCJKLanguage = true
 [[params.menu]]
     before = false
     label  = "旧版Blog"
-    link   = "http://niusmallnan.github.io/_build/html/"
+    link   = "http://niusmallnan.com/_build/html/"
 
 # Enter a link for the follow button on the left
 [params.profile]
