@@ -5,8 +5,10 @@ banner = ""
 images = [
 ]
 tags = [
+    "Rancher",
 ]
 categories = [
+    "coding",
 ]
 description = ""
 menu = ""
