@@ -83,7 +83,8 @@ rancher-net激活的是vxlan driver，它会生成一个vtep1042设备，并开�
 这个设备基于udp 4789构建vxlan overlay的两端通信，对于本机的容器通过eth0走bridge通信，对于
 其他Host的容器，则是通过路由规则转发到vtep1042设备上，再通过overlay到对端主机，
 由对端主机的bridge转发到相应的容器上。整个过程如图所示：  
-![](http://ww3.sinaimg.cn/large/006tKfTcjw1fav9j4nhblj30e607z0um.jpg)
+![](http://ww3.sinaimg.cn/large/006tKfTcjw1fav9j4nhblj30e607z0um.jpg)  
+vxlan实现的原理可更多参考：<https://www.kernel.org/doc/Documentation/networking/vxlan.txt>
 
 ### 总结
 容器网络是容器云平台中很重要的一环，对于不通规模不通的安全要求会有不同的选型。
