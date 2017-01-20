@@ -26,7 +26,7 @@ Kubernetes（以下简称K8s）是Rancher平台重点支持的一个编排引擎
 ### 部署要点
 部署之前的操作系统选型上，相对来说我比较推荐ubuntu+docker的组合，
 毕竟这个组合在国外使用的用户比较多，相对来说bug fix的速度也是比较快的，
-如果你是一个docker重度用户，应该甚至docker本身的bug并不少。
+如果你是一个docker重度用户，应该深知docker本身的bug并不少。
 
 如果是部署一个新的Rancher环境，我推荐用下面的脚本来启动，通过设置DEFAULT_CATTLE_CATALOG_URL，
 这样可以直接指定我定制过的Rancher K8s：
@@ -38,7 +38,7 @@ docker run -d --restart=unless-stopped \
 ```
 
 当然如果是已经部署的Rancher环境，那就需要在Rancher UI上，做一下简单的修改，
-Disable已有的library catalog repo，指向我定制过的即可，注意branch的设置： 
+Disable已有的library catalog repo，指向我定制过的即可，注意branch的设置，网络状况不好的需要耐心等待重新拉取repo内容： 
 ![](https://ww3.sinaimg.cn/large/006y8lValy1fbw2toyl38j30s30a50u6.jpg)
 
 在部署agent节点前，如果是一个干净的环境最好，但是如果是曾经做过agent节点，
