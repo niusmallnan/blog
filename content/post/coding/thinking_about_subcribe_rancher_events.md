@@ -1,6 +1,6 @@
 +++
 date = "2017-02-23T17:33:56+08:00"
-title = "关于Subcribe Rancher Events的思考"
+title = "关于Subscribe Rancher Events的思考"
 slug = "thinking-about-subcribe-rancher-events"
 description = ""
 menu = ""
@@ -41,12 +41,12 @@ Rancher不会依赖任何MQ，基于websocket的实现十分轻量级，
 便不赘言。<http://niusmallnan.com/2016/08/25/rancher-envent/>
 
 ### Subscribe Rancher Events的架构模式
-Rancher的体系内，很多微服务的组件都是基于Subcribe Rancher Events这种架构，举个例子来看，
+Rancher的体系内，很多微服务的组件都是基于Subscribe Rancher Events这种架构，举个例子来看，
 以rancher-metadata组件为例：  
 ![](https://ww4.sinaimg.cn/large/006tNc79ly1fd0kmwbmu4j30iy07wq3n.jpg)  
 metadata服务可以提供当前host的元数据查询，我们可以很容器的知道env内的stack/service/container的情况，
 这些数据其实由rancher-server也就是cattle引擎生成的，那么生成之后怎么发送给各个agent呢？
-其实就是metadata进行了subcribe rancher events，当然它只监听了config.update事件，
+其实就是metadata进行了subscribe rancher events，当然它只监听了config.update事件，
 只要这个事件有通知，metadata服务便会下载新的元数据，这样就达到了不断更新元数据的目的。
 
 随着深入的使用Rancher，肯定会有一些伙伴需要对Rancher进行扩展，那就需要自行研发了，
