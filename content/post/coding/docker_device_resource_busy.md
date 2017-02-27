@@ -41,12 +41,13 @@ device or resource busy
 ![](http://ww3.sinaimg.cn/large/006tKfTcjw1fb4zo5bmavj30ex04n0u4.jpg)
 
 ### 修复方式
-首先这肯定是docker的一个bug，很明显它不应该做多余的mount。这个bug直到docker v1.2.4版本才被修复，
+首先这肯定是docker的一个bug，很明显它不应该做多余的mount。这个bug在docker v1.12.4版本做了一些修复，
 相关PR<https://github.com/docker/docker/pull/29083>，类似的issue<https://github.com/docker/docker/issues/20560>，
-都可以在github上找到。所以docker v1.2.4之前也都会比较容器碰到这个问题，
-那么想避免这个问题，升级docker就可以解决。
+都可以在github上找到。所以docker v1.12.4之前也都会比较容易碰到这个问题，
+虽然有一些FIX已经merge了，但是其实并没有完全解决，起码我在docker v1.12.6上使用AUFS驱动，
+还是会发现这个问题。
 
-那么如果因为业务原因无法升级docker，但是还想避免这个问题怎么办？
+那么如果因为各种原因无法变更docker，但是还想避免这个问题怎么办？
 比如可以在mount /var/lib/docker（或是你迁移之后的DockerRootDir）的容器中执行以下脚本：
 ```
 #!/bin/bash
@@ -58,3 +59,5 @@ for i in $(curl -s --unix /var/run/docker.sock http://localhost/info | jq -r .Do
 done
 ```
 主要目的是把多余mount的path卸载掉，这样就不会因为同时挂载导致device or resource busy的问题。
+需要注意的是，是否也要umount /run和/var/run要结合自身实际应用去考虑。
+
