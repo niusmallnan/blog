@@ -56,8 +56,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
     DocumentRoot "/Users/niusmallnan/Sites"
     ServerName localhost
     ErrorLog "/private/var/log/apache2/sites-error_log"
-    CustomLog "/private/var/log/apache2/sites-access_log"
-    common
+    CustomLog "/private/var/log/apache2/sites-access_log" common
     <Directory />
         Options Indexes FollowSymLinks MultiViews
         AllowOverride None
