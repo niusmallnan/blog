@@ -31,10 +31,18 @@ RancherLabs创立之初就立志于做一家纯粹的云服务公司，秉承一
 作为开源软件，不断积累改进是我们的目标，文章最后给大家提供了各种反馈使用问题的渠道。
 
 ### 如何使用  
-首先声明一下，当前版本还是RC版本，还有一些使用限制，如下：
+首先声明一下，当前的阿里云专属镜像RC版本，还有一些使用限制，如下：
 
 1. 需使用阿里云VPC网络
 2. 创建VM时，只支持密钥，不支持设置密码
+
+首先下载RancherOS专属阿里云镜像，比如：
+
+将镜像上传到阿里云对象存储中，因为自定义镜像是需要从对象存储中获取。
+
+创建自定义镜像，按如下方式填写：
+![](https://ws4.sinaimg.cn/large/006tKfTcly1fmm2l7gfbhj312a0rewfl.jpg)
+注意事项包括：系统盘大小大于10GB，系统架构为x86_64，系统平台为Others Linux，镜像格式为VHD。
 
 创建VM时，按以下方式选择镜像：  
 ![](https://ws3.sinaimg.cn/large/006tKfTcly1fm777rks1bj317i0a0jrq.jpg)
@@ -43,7 +51,7 @@ RancherLabs创立之初就立志于做一家纯粹的云服务公司，秉承一
 ![](https://ws2.sinaimg.cn/large/006tKfTcly1fm77ckj7ywj31ek0aq3z5.jpg)  
 ![](https://ws4.sinaimg.cn/large/006tKfTcly1fm76t2hvs7j316u12641q.jpg)
 
-由于现在ROS镜像还没有发布到阿里云镜像市场中，所以想要先睹为快的同学可以联系我们的工作人员，发送AliyunUid，我们会把镜像共享给你使用：  
+由于现在ROS镜像还没有发布到阿里云镜像市场中，当你创建完自定义镜像后，你可以按照如下方式共享给你的伙伴使用：  
 ![](https://ws1.sinaimg.cn/large/006tKfTcly1fm76xwulxxj30vy0jw74v.jpg)
 
 ### 反馈渠道  
