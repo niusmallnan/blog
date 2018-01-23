@@ -19,9 +19,10 @@ menu = ""
 
 喜欢参与技术社区活动，曾担任：
 
-* OpenStack中国社区长期作者
-* InfoQ兼职编辑
+* RancherOS Maintainer
 * Rancher中国社区布道师
+* InfoQ兼职编辑
+* OpenStack中国社区长期作者
 * MBH树莓派社区成员
 
 热爱coding，热爱技术分享，技术宅&科幻粉。
