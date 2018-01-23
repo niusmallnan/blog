@@ -60,7 +60,7 @@ $ echo 1 > /sys/devices/system/cpu/microcode/reload
 $ dmesg | grep microcode
 [   13.659429] microcode: sig=0x306f2, pf=0x1, revision=0x36
 [   13.665981] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
-[  510.899733] microcode: updated to revision 0x3b, date = 2017-11-17
+[  510.899733] microcode: updated to revision 0x3b, date = 2017-11-17  # 这条msg很重要
 ```
 
 查看cpuinfo，再次确认microcode版本，不同的CPU型号，升级后对应的microcode版本是不同的：
